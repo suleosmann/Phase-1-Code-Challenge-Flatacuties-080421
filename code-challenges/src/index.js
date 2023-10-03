@@ -20,7 +20,23 @@ function displayCharacterNames(characters){
         characterBar.appendChild(span);
     })
 }
+//Display the clicked character's details
+function displayCharacterDetails(character){
+    const detailedInfo = document.getElementById('detailed-info');
+    // Set character name
+    const nameElement = detailedInfo.querySelector("#name")
+    nameElement.textContent = character.name;
 
+    // Set character image
+    const imageElement = detailedInfo.querySelector("#image")
+    imageElement.src = character.image;
+    imageElement.alt = character.image;
+
+    // Set vote count
+    const voteCount = detailedInfo.querySelector('#vote-count');
+    voteCount.textContent = character.votes;
+    
+}
 
 
 
