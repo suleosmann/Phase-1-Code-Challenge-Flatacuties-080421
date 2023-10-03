@@ -49,7 +49,10 @@ document.getElementById('votes-form').addEventListener('submit', function(event)
     
     // Update the displayed vote count
     currentVotesCount.textContent = newVoteCount;
+    voteInput.value = " ";
     
 })
+
+
 
 fetchCharacters();
