@@ -38,6 +38,18 @@ function displayCharacterDetails(character){
     
 }
 
+//Add votes when the form is submitted
+document.getElementById('votes-form').addEventListener('submit', function(event){
+    event.preventDefault();
 
+    const voteInput = document.getElementById('votes');
+    const currentVotesCount =document.getElementById('vote-count')
+    // Parse the input as an integer and add to the current votes
+    const newVoteCount = parseInt(currentVotesCount.textContent)+parseInt(voteInput.value);
+    
+    // Update the displayed vote count
+    currentVotesCount.textContent = newVoteCount;
+    
+})
 
 fetchCharacters();
