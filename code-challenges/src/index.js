@@ -52,7 +52,13 @@ document.getElementById('votes-form').addEventListener('submit', function(event)
     voteInput.value = " ";
     
 })
-
+document.getElementById('reset-btn').addEventListener('click', function() {
+    // Get the vote count element
+    const currentVotesElement = document.getElementById('vote-count');
+    
+    // Set its content to 0
+    currentVotesElement.textContent = '0';
+});
 
 
 fetchCharacters();
